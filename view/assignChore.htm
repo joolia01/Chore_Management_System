@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang ="en">
+
+<head>
+	<meta charset = "UTF-8">
+	<meta name = "viewport",
+	content = "width = device-width,
+	initial-scale = 1.0">
+
+	<title> Chore Management System </title>
+	<link rel = "stylesheet" href = "style.css">
+    
+</head>
+
+<body>
+	<h1>Assign Chore Page</h1>
+    
+    <!--Form (required attributes- action, method, name, id) -->
+    
+    <form action="/action_page.php" method="post" name ="assignChoreForm" id = "asignChoreForm">
+
+      <!--Assign person- should be a dropdown field where the people to be assigned can be selected from the list (required attributes- placeholder, type, name, id and any form of validation attribute) -->
+        
+      <label for="selectPerson">Chore assigned to:</label>
+      <select id="selectPersonAssign" name="selectPerson" type="select" required>
+      <option value="0">Select</option>
+      <option value="1">Father</option>
+      <option value="2">Mother</option>
+      <option value="3">Son</option>
+      <option value="4">Daughter</option>
+      </select>
+      <br>
+      <br>
+
+      <!--Assign CHORE- should be a dropdown field where the added chores can be  can be selected from the list (required attributes- placeholder, type, name, id and any form of validation attribute) -->  
+      <label for="selectChore">Chore:</label>
+      <select id="selectChoreTodo" name="selectChore" type="select" required>
+      <option value="0">Select</option>
+      <option value="shopping">Shopping</option>
+      <option value="mopping">Mopping</option>
+      </select>
+      <br>
+      <br>
+        
+      <!--Due date- should be a date field element (required attributes-type, name, id, any form of validation attribute)-->
+      <label for="dueDate">Due Date:</label><br>
+      <input type="date" id="dueDate" name="dueDate" required>
+      <br>
+      <br>
+        
+      <!-- Button (required attributes- type, name, id) -->
+      <button type="button" name="myButton" id="btnClick">Submit</button> 
+      </form><br> 
+
+</body>
+
+</html>

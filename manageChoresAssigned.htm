@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang ="en">
+
+<head>
+	<meta charset = "UTF-8">
+	<meta name = "viewport",
+	content = "width = device-width,
+	initial-scale = 1.0">
+
+	<title> Chore Management System </title>
+	<link rel = "stylesheet" href = "style.css">
+    <style>
+        table 
+        {
+            width: 100%;
+        }
+
+        th 
+        {
+            background-color: #FFC0CB;
+        }
+
+        th, td 
+        {
+            border: 1px solid #FFC0CB;
+            text-align: left;
+        }
+    </style>
+
+</head>
+
+<body>
+	<h1>Assigned Chore Management Page</h1>
+    
+    <!--This page is to manage the chores assigned
+        Table (required attributes- chore name, person assigned to chore, date assigned, due date
+        chore status, actions). These actions would allow the admin to perform certain operations such as editing a chore assignment,
+        marking a chore as complete or incomplete-->
+    
+    <!-- Assigned Chores -->
+    <section>
+     <h2>Assigned Chores</h2>
+     <table>
+     <thead>
+     <tr>
+     <th>Chore Name</th>
+     <th>Assigned To</th>
+     <th>Date Assigned</th>
+     <th>Date Due</th>
+     <th>Chore Status</th>
+     <th>Actions</th>
+     </tr>
+     </thead>
+
+     <tbody>   
+     <tr>
+     <td>Vacuum the carpet</td>
+     <td>Rachel Adams</td>
+     <td>2024-02-01</td>
+     <td>2024-02-15</td>
+     <td>Pending</td>
+     <td> <button onclick="editChore()">Edit</button>
+          <button onclick="markAsCompleted()">Mark as Completed</button>
+          <button onclick="markAsIncomplete()">Mark as Incomplete</button>
+    </td>
+     </tr>
+
+    </tbody>
+</table>
+</section>
+
+<!--These function allow the admin to perform certain operations such as editing a chore assignment,marking a chore as complete or incomplete -->
+<script>
+    function editChore() 
+    {
+        alert("Chore Editted");
+    }
+
+    function markAsCompleted() 
+    {
+        alert("Chore marked as completed");
+    }
+
+    function markAsIncomplete() 
+    {
+        alert("Chore marked as incomplete");
+    }
+</script>
+</body>
+
+</html>

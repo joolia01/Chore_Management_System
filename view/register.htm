@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang ="en">
+
+<head>
+	<meta charset = "UTF-8">
+	<meta name = "viewport",
+	content = "width = device-width,
+	initial-scale = 1.0">
+
+	<title> Chore Management System </title>
+	<link rel = "stylesheet" href = "style.css">
+</head>
+
+<body>
+	<h1>Register Page</h1>
+    
+    <!--Form (required attributes- action, method, name, id) -->
+    
+    <form action="/action_page.php" method="post" name ="loginForm" id = "formID">
+
+      <!--First name input (required attributes- placeholder, type, name, id and any form of validation attribute) --> 
+      <!-- This pattern will match first names that consist of alphabetical characters, spaces, hyphens, and/or apostrophes, and are at least two characters long.-->
+      <label for="fname">First name:</label><br>
+      <input type="text" pattern = "[A-Za-z -']{2,}$"  id="fname" name="fname"placeholder="Enter your first name" required> <br>
+       <br> 
+         
+      <!--Last name input (required attributes- placeholder, type, name, id and any form of validation attribute) --> 
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="lname"placeholder="Enter your last name" required> <br>
+       <br> 
+      
+      <!--Radio BUtton for gender (required attributes- name and id) (0-Male, 1- Female)--> 
+      <p>Please select your gender (0-Male, 1- Female)</p>
+      <input type = "radio" id="male" name="gender">
+      <label for="male">Male</label><br>
+       
+      <input type = "radio"id="female" name="gender">
+      <label for="female">Female</label><br>
+      <br>
+        
+      <!--Drop down for Family Role (required attributes- name and id) (0-Select, 1-Father, 2-Mother, 3-Son, 4-Daughter)-->  
+      <label for="familyRole">Select your family role:</label>
+      <select id="familyRoleDropdown" name="familyRole">
+      <option value="0">Select</option>
+      <option value="1">Father</option>
+      <option value="2">Mother</option>
+      <option value="3">Son</option>
+      <option value="4">Daughter</option>
+      </select>
+      <br>
+      <br>
+       
+       <!--Date of Birth Input (required attributes- placeholder, type, name, id and any form of validation attribute) --> 
+      <label for="dob">Date of Birth:</label><br>
+      <input type="date" id="dob" name="dob" placeholder="Select your  date of birth" required>
+      <br>
+      <br>   
+         
+      <!--Phone Number Input (required attributes- placeholder, type, name, id and any form of validation attribute) --> 
+      <label for="phoneNumber">Enter your phone number:</label><br>
+<input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number" required>
+       <br>
+       <br>
+
+       <!--Email input (required attributes- placeholder, type, name, id and any form of validation attribute) --> 
+      <label for="email">Enter your email:</label><br>
+      <input type="email" id="email" name="email" placeholder="example@example.com" required><br>
+       <br> 
+         
+       <!--Password (required attributes- placeholder, type, name, id and any form of validation attribute) -->
+      <label for="password">Enter your password:</label><br>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required><br><br>  
+      
+      <!--Password retype input (required attributes- placeholder, type, name, id and any form of validation attribute) -->
+      <label for="passwordRetype">Retype your password:</label><br>
+      <input type="password" id="passwordRetype" name="passwordRetype" placeholder="Retype your password" required> <br><br>
+        
+      <!--Register Button (required attributes-type, name, id ) -->
+      <button type="submit" id="registerButton" name="registerButton">Register</button>
+      <br>
+      <br>  
+
+      <!--Login link to redirect to login page -->
+      <div>
+        <a href="login.htm">Log-in</a>
+      </div>
+
+    </form>  
+
+</body>
+
+</html>

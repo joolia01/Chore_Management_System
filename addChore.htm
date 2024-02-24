@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang ="en">
+
+<head>
+	<meta charset = "UTF-8">
+	<meta name = "viewport",
+	content = "width = device-width,
+	initial-scale = 1.0">
+
+	<title> Chore Management System </title>
+	<link rel = "stylesheet" href = "style.css">
+    <style>
+        table 
+        {
+            width: 100%;
+        }
+
+        th 
+        {
+            background-color: #FFC0CB;
+        }
+
+        th, td 
+        {
+            border: 1px solid #FFC0CB;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+	<h1>Add Chore Page</h1>
+    
+    <!--Form (required attributes- action, method, name, id) -->
+    
+    <form action="/action_page.php" method="post" name ="addChoreForm" id = "addChoreForm">
+
+      <!--Chore input (required attributes- placeholder, type, name, id and any form of validation attribute) -->  
+      <label for="choreName">Add a chore:</label><br>
+      <input type="text" id="choreName" name="choreName" placeholder="Enter chore name" required><br>
+
+      <!-- Button (required attributes- type, name, id) -->
+      <button type="button" name="myButton" id="btnClick">Submit</button> 
+      </form><br> 
+
+      <!--The webpage should feature a table that displays a list of all created chores on the system.
+          Table attributes (chore id, chore name, actions). The actions will handle edit and delete operations-->
+    
+      <section>
+      <h2>All Chores Created</h2>
+     <table>
+     <thead>
+     <tr>
+     <th>Chore ID</th>
+     <th>Chore Name</th>
+     <th>Actions</th>
+     </tr>
+     </thead>
+
+     <tbody>   
+     <tr>
+     <td>1</td>
+     <td>Shopping</td>
+     <td> <button onclick="editChore(1)">Edit</button>
+          <button onclick="deleteChore(1)">Delete</button>
+    </td>
+     </tr>
+
+     <tr>
+     <td>2</td>
+     <td>Mopping</td>
+     <td> <button onclick="editChore(2)">Edit</button>
+          <button onclick="deleteChore(2)">Delete</button>
+     </td>
+        </tr>
+    </tbody>
+</table>
+</section>
+
+<!--These functions would be used to edit and delete a chore with a given chore ID-->
+<script>
+    function editChore(choreId) 
+    {
+        alert("Editing chore with ID: " + choreId);
+    }
+
+    function deleteChore(choreId) 
+    {
+        alert("Deleting chore with ID: " + choreId);
+    }
+</script>
+
+</body>
+
+</html>

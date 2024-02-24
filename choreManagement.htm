@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang ="en">
+
+<head>
+	<meta charset = "UTF-8">
+	<meta name = "viewport",
+	content = "width = device-width,
+	initial-scale = 1.0">
+
+	<title> Chore Management System </title>
+	<link rel = "stylesheet" href = "style.css">
+    <style>
+        table 
+        {
+            width: 100%;
+        }
+
+        th 
+        {
+            background-color: #FFC0CB;
+        }
+
+        th, td 
+        {
+            border: 1px solid #FFC0CB;
+            text-align: left;
+        }
+    </style>
+
+</head>
+
+<body>
+	<h1>Chore Management Page</h1>
+    
+    <!--This page should have two sections:
+        1. Ongoing/ pending chore assignments
+           a. This should feature tables with the following attributes (chore name, assigned by, date assigned,
+              date due, chore status and actions). The actions tab will handle the status of a chore such as marking it as completed.
+            
+        2. Completed Chores
+           a. Should also feature a table design showing a list of only completed chores-->
+    
+    <!-- Ongoing/Pending Chore Assignments Section -->
+    <section>
+     <h2>Ongoing/Pending Chore Assignments</h2>
+     <table>
+     <thead>
+     <tr>
+     <th>Chore Name</th>
+     <th>Assigned By</th>
+     <th>Date Assigned</th>
+     <th>Date Due</th>
+     <th>Chore Status</th>
+     <th>Actions</th>
+     </tr>
+     </thead>
+
+     <tbody>   
+     <tr>
+     <td>Wash the dishes</td>
+     <td>Julia Mc-Addy</td>
+     <td>2024-02-01</td>
+     <td>2024-02-15</td>
+     <td>Pending</td>
+     <td><button onclick="markAsCompleted()">Mark as Completed</button></td>
+     </tr>
+        
+     <tr>
+     <td>Do the laundry</td>
+     <td>Juliann Mc-Addy</td>
+     <td>2024-02-01</td>
+     <td>2024-02-15</td>
+     <td>Pending</td>
+     <td><button onclick="markAsCompleted()">Mark as Completed</button></td>
+        </tr>
+    </tbody>
+</table>
+</section>
+
+<!-- Completed Chores Assignments Section -->
+<section>
+    <h2>Completed Chore Assignments</h2>
+    <table>
+    <thead>
+    <tr>
+    <th>Chore Name</th>
+    <th>Assigned By</th>
+    <th>Date Assigned</th>
+    <th>Date Due</th>
+    <th>Chore Status</th>
+    </tr>
+    </thead>
+
+    <tbody>   
+    <tr>
+    <td>Fold the laundry</td>
+    <td>Alley Dawson</td>
+    <td>2024-02-01</td>
+    <td>2024-02-15</td>
+    <td>Pending</td>
+    <td></td>
+    </tr>
+       
+    <tr>
+    <td>Wash the car</td>
+    <td>Austin Moon</td>
+    <td>2024-02-01</td>
+    <td>2024-02-15</td>
+    <td>Pending</td>
+       </tr>
+   </tbody>
+</table>
+</section>
+
+<!--This markAsCompleted function displays a simple alert message saying "Chore marked as completed" when called. -->
+<script>
+    function markAsCompleted() 
+    {
+        alert("Chore marked as completed");
+    }
+</script>
+</body>
+
+</html>
